@@ -6,7 +6,6 @@ ruby '2.7.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
@@ -66,3 +65,14 @@ gem 'paperclip'
 gem 'masonry-rails'
 
 gem 'acts_as_votable'
+
+group :development do
+  gem 'sqlite3', '~> 1.4'
+end
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
+
+gem 'sqlite3', '~> 1.4'
